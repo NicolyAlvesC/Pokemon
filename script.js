@@ -40,12 +40,13 @@ formulario.addEventListener('submit', function(e){
         })
 
         .catch(function (err) {
-            if(err == 'SyntaxError: Unexpected token N, "Not Found" is not valid JSON'){
-                html = 'Pokémon não encontrado! 😒'
-            } else {
-                html = err
-            }
-            resposta.innerHTML = html
+           if (err = Error){
+            html = 'Pokémon não encontrado!'
+           } else {
+            html = err
+           }
+
+           resposta.innerHTML = html
         })
 });
 
